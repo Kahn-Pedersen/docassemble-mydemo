@@ -1,0 +1,32 @@
+metadata:
+  title: Demo av enklare dokumentasssemblering
+  required privileges:
+    - app_demo
+---
+question: Demo av enklare dokumentassemblering
+fields:
+  - Rubrik: titel
+  - Mottagare: mottagare
+  - Villkor: villkor
+    datatype: checkboxes
+    none of the above: False
+    choices:
+    - "Alternativ 1": "ett"
+      help: "Här kan kontextuell hjälp användas för att stödja användarens val"
+    - "Alternativ 2": "två"
+    - "Alternativ 3": "tre"
+  - Belopp: belopp
+    datatype: integer
+continue button label: Skapa dokument
+---
+attachment:
+  name: dokument
+  filename: dokument
+  variable name: dokument
+  docx template file: docassemble_test.docx
+---
+question: Klart!
+mandatory: True
+subquestion: |
+  Dokumentet är nu skapat och kan laddas ner [här](${dokument.docx.url_for()})
+ 
