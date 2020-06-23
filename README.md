@@ -6,3 +6,6 @@ A docassemble extension.
 
 Staffan Malmgren, staffan.malmgren@kahnpedersen.se
 
+## Foo
+
+bar!
